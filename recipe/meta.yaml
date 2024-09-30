@@ -33,6 +33,7 @@ requirements:
     - antlr4-tools ==0.2.1
     - python-build
     - pip
+    - matplotlib
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - {{ cdt('mesa-dri-drivers') }}  # [linux]
     - {{ cdt('libselinux') }}  # [linux]
@@ -45,7 +46,7 @@ requirements:
     - importlib-resources
     - antlr4-python3-runtime ==4.13.1
     - configparser
-    - matplotlib-base
+    - matplotlib
     - networkx >=3
     - numpy
     - pandas
@@ -85,4 +86,3 @@ about:
 extra:
   recipe-maintainers:
     - chrisburr
-
