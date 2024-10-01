@@ -48,11 +48,11 @@ requirements:
     - antlr4-python3-runtime ==4.13.1
     - configparser
     - matplotlib-base
-    - networkx >=3
+    - networkx
     - numpy
     - pandas
     - scipy
-    - sympy >=1.7
+    - sympy 
     - testtools
     - occt
     - vtk
