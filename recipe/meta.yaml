@@ -18,7 +18,7 @@ build:
 
 requirements:
   host:
-    - python >=3.8.0
+    - python
     - cython
     - cmake >=3.20
     - make
@@ -43,7 +43,7 @@ requirements:
     - {{ cdt('libxext') }}     # [linux]
 
   run:
-    - python >=3.8.0
+    - python 
     - importlib-resources
     - antlr4-python3-runtime ==4.13.1
     - configparser
