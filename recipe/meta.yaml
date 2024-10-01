@@ -10,6 +10,7 @@ source:
   sha256: 35f7988ae5a08eff7a6e02de6fc2b742553d8002e91d6f3b090d421c807557ee
 
 build:
+  skip: true  # [win or py<38]
   entry_points:
     - pyg4ometry = pyg4ometry.cli:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -17,7 +18,7 @@ build:
 
 requirements:
   host:
-    - python >=3.6.8
+    - python >=3.8.0
     - cython
     - cmake >=3.20
     - make
@@ -33,7 +34,7 @@ requirements:
     - antlr4-tools ==0.2.1
     - python-build
     - pip
-    - matplotlib
+    - matplotlib-base
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - {{ cdt('mesa-dri-drivers') }}  # [linux]
     - {{ cdt('libselinux') }}  # [linux]
@@ -42,11 +43,11 @@ requirements:
     - {{ cdt('libxext') }}     # [linux]
 
   run:
-    - python >=3.6.8
+    - python >=3.8.0
     - importlib-resources
     - antlr4-python3-runtime ==4.13.1
     - configparser
-    - matplotlib
+    - matplotlib-base
     - networkx >=3
     - numpy
     - pandas
